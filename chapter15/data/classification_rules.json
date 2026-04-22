@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "name": "交通費_タクシー",
+      "category": "交通費",
+      "vendor_keywords": ["サンプルタクシー"]
+    },
+    {
+      "name": "交通費_飛行機",
+      "category": "交通費",
+      "vendor_keywords": ["サンプル航空"]
+    }
+  ]
+}

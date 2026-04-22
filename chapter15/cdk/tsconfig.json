@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["es2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./cdk.out",
+    "declaration": true,
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "cdk.out"]
+}

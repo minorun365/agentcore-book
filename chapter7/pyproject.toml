@@ -1,0 +1,13 @@
+[project]
+name = "chapter7"
+version = "0.1.0"
+description = "第7章 外部認証を制御する「アイデンティティ」"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "strands-agents==1.36.0",
+    "bedrock-agentcore==1.6.3",
+    "httpx",
+    "fastapi",
+    "uvicorn",
+]

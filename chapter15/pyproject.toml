@@ -1,0 +1,9 @@
+[project]
+name = "expense-agent"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "strands-agents==1.36.0",
+    "bedrock-agentcore==1.6.3",
+    "boto3==1.42.92",
+]

@@ -1,0 +1,20 @@
+{
+  "name": "expense-agent-cdk",
+  "version": "0.1.0",
+  "scripts": {
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "ts-node": "^10.9.0",
+    "@types/node": "^22.0.0",
+    "aws-cdk": "2.1118.4"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.250.0",
+    "constructs": "10.6.0",
+    "@aws-cdk/aws-bedrock-agentcore-alpha": "2.250.0-alpha.0",
+    "@cdklabs/deploy-time-build": "0.1.2",
+    "dotenv": "17.4.2"
+  }
+}

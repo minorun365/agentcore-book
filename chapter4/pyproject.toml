@@ -1,0 +1,16 @@
+[project]
+name = "chapter4"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "rich==14.3.3",
+    "strands-agents==1.36.0",
+    "strands-agents-tools[rss]==0.5.0",
+]
+
+[dependency-groups]
+dev = [
+    "boto3[crt]==1.42.92",
+]

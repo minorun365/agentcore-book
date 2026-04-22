@@ -1,0 +1,30 @@
+13.4節 ハンズオンで便利なメモ帳
+
+このメモにはセンシティブな情報が含まれます。
+お手元のパソコンのテキストエディターに貼り付けて、保存せずに使うことをお勧めします。
+（絶対にGitHubへプッシュしないでください！）
+
+
+ランタイムARN（13.4.5でメモ → 13.4.6, 13.4.8で利用）
+arn:aws:bedrock-agentcore:us-east-1:XXXXXXXXXXXX:runtime/agent_BookChecker-XXXXXXXXXX
+
+AmplifyドメインURL（13.4.6でメモ → 13.4.8で利用）
+https://main.xxxxxxxxxx.amplifyapp.com
+
+CognitoユーザープールID（13.4.6でメモ → 13.4.8で利用）
+us-east-1_XXXXXXXXX
+
+CognitoクライアントID（13.4.6でメモ → 13.4.8で利用）
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+コールバックURL（13.4.8でメモ → 13.4.8で設定。上記ドメインURLにパスを追加）
+https://main.xxxxxxxxxx.amplifyapp.com/api/oauth2/callback
+
+クレデンシャルプロバイダー名（13.4.8でメモ → 13.4.8の環境変数で利用）
+google-oauth-client-XXXXX
+
+検出URL（13.4.8のインバウンド認証で利用。上記ユーザープールIDを埋め込む）
+https://cognito-idp.us-east-1.amazonaws.com/us-east-1_XXXXXXXXX/.well-known/openid-configuration
+
+ランタイムID（13.4.8でメモ → 13.4.8のワークロードID設定で利用）
+agent_BookChecker-XXXXXXXXXX

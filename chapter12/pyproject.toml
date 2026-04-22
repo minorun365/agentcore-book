@@ -1,0 +1,10 @@
+[project]
+name = "chapter12"
+version = "0.1.0"
+description = "第12章 品質を自動評価する「評価」"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "strands-agents==1.36.0",
+    "bedrock-agentcore[strands-agents-evals]==1.6.3",
+]

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "user_id": "001",
+      "name": "田中太郎",
+      "email": "your-email+1@gmail.com",
+      "role": "メンバー"
+    },
+    {
+      "user_id": "002",
+      "name": "鈴木一郎",
+      "email": "your-email+2@gmail.com",
+      "role": "課長"
+    },
+    {
+      "user_id": "003",
+      "name": "山田次郎",
+      "email": "your-email+3@gmail.com",
+      "role": "部長"
+    }
+  ]
+}

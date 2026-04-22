@@ -1,0 +1,32 @@
+{
+  "name": "book-checker-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.15.3",
+    "@aws-sdk/client-bedrock-agentcore": "^3.1033.0",
+    "aws-amplify": "^6.16.2",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.21.0",
+    "@aws-amplify/backend-cli": "^1.3.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "aws-cdk": "^2",
+    "aws-cdk-lib": "^2",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.23.1",
+    "tsx": "^4.19.0",
+    "typescript": "~5.9.3"
+  }
+}

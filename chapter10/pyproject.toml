@@ -1,0 +1,10 @@
+[project]
+name = "chapter10"
+version = "0.1.0"
+description = "第10章 クラウドならではの「組み込みツール」"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "strands-agents==1.36.0",
+    "strands-agents-tools[agent-core-browser,agent-core-code-interpreter]==0.5.0",
+]

@@ -1,1 +1,32 @@
 CLAUDE.md
+.env
+.claude
+
+# Node.js関連
+node_modules/
+package-lock.json
+.next/
+dist/
+.cache/
+*.tsbuildinfo
+
+# Python関連
+__pycache__/
+*.pyc
+.venv/
+.python-version
+.pytest_cache/
+
+# CDK関連
+cdk.out/
+
+# Streamlit関連
+.streamlit
+
+# Bedrock AgentCore関連
+.bedrock_agentcore.yaml
+.dockerignore
+Dockerfile
+
+# macOS
+.DS_Store

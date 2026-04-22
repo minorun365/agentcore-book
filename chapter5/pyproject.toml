@@ -1,0 +1,16 @@
+[project]
+name = "chapter5"
+version = "0.1.0"
+description = "第5章 AgentCoreの概要とメイン機能「ランタイム」（スニペット用）"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "strands-agents==1.36.0",
+    "strands-agents-tools==0.5.0",
+    "bedrock-agentcore==1.6.3",
+    "boto3==1.42.92",
+    "mcp==1.27.0",
+    "mcp-proxy-for-aws",
+    "fastapi",
+    "uvicorn",
+]
