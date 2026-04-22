@@ -37,10 +37,21 @@ https://www.amazon.co.jp/dp/4815641234
 
 ### 動作環境
 
-- Python 3.13
+- Python 3.14
 - パッケージ管理: [uv](https://github.com/astral-sh/uv)
 - AWSリージョン: バージニア北部（`us-east-1`）
-- 主要モデル: Claude Sonnet 4.6 / Haiku 4.5（USクロスリージョン推論プロファイル）
+- 主要モデル: Claude Sonnet 4.6 / Haiku 4.5 / Opus 4.6（USクロスリージョン推論プロファイル）
+
+### 認証と環境変数
+
+- **AWS認証**: 本書のサンプルはすべて **AWS SSO 認証セッション**を前提としています。実行前に `aws sts get-caller-identity` で認証済みセッションがあることを確認してください（アクセスキー・シークレットキーをコードに直接書く構成は使いません）
+- **追加のAPIキー・環境変数が必要な章**:
+  - **第3章**: `06_tools.py` で Tavily 検索ツールをデモします。実行する場合は [Tavily](https://tavily.com/) の API キーを取得し、シェル環境変数 `TAVILY_API_KEY` を設定してください
+  - **第11章**（Langfuse構成）: Langfuse の `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` / `LANGFUSE_HOST` を **AgentCore ランタイムの環境変数**として設定します
+  - **第13章**: `CREDENTIAL_PROVIDER_NAME` / `CALLBACK_URL` / `AWS_DEFAULT_REGION` / `MEMORY_BOOKCHECKERMEMORY_ID` を **AgentCore ランタイムの環境変数**、`NEXT_PUBLIC_AGENT_ARN` を **Amplify Hosting の環境変数**として設定します
+  - **第15章**: ローカルの `.env` に `BEDROCK_MODEL_ID` および Confluence 接続情報（`CONFLUENCE_URL` / `CONFLUENCE_EMAIL` / `CONFLUENCE_API_TOKEN` / `CONFLUENCE_SPACE_KEY`）を設定します。テンプレートは [`chapter15/.env.example`](./chapter15/.env.example) を参照
+
+各章の具体的な手順は、章ディレクトリ配下の `README.md` をご覧ください。
 
 
 ## 🆘 エラー等でハンズオンが進められないときは
@@ -60,9 +71,9 @@ https://www.amazon.co.jp/dp/4815641234
 
 ## ✍️ 著者
 
-- **御田 稔**（Minoru Onda / KAG みのるん）— 第5章〜第13章、第16章、付録
-- **森田 和明**（Kazuaki Morita / KTC）— 第1章、第3章、第4章、第14章
-- **熊田 寛**（Kan Kumada / Relic）— 第2章、第15章
+- **御田 稔**（Minoru Onda / KAG みのるん） [@minorun365](https://github.com/minorun365) — 第5章〜第13章、第16章、付録
+- **森田 和明**（Kazuaki Morita / KTC） [@moritalous](https://github.com/moritalous) — 第1章、第3章、第4章、第14章
+- **熊田 寛**（Kan Kumada / Relic） [@kumada15](https://github.com/kumada15) — 第2章、第15章
 
 
 ## 📄 ライセンス
