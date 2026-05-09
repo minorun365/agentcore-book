@@ -9,19 +9,21 @@ https://www.amazon.co.jp/dp/4815641234
 
 ## 📣 新着のお知らせ
 
-<!-- 発売後、仕様変更やライブラリアップデートに伴う更新情報をここに追記していきます。 -->
+- [2026/5/29] 発売予定です！
 
 
 ## 💻 サンプルコードの使い方
 
-各チャプター名のディレクトリ配下に、書籍内のサンプルコードを格納しています。コードの打ち間違いによるエラーを防ぐためにも、コピペ用にぜひ活用ください。
+各チャプター名のディレクトリ配下に、書籍内のサンプルコードを格納しています。また、コマンド類も各章READMEに記載しています。
+
+コードの打ち間違いによるエラーを防ぐためにも、コピペ用にぜひ活用ください！
 
 ### 第1部 基礎編
 
 | 章 | 内容 | ディレクトリ |
 |----|------|----|
 | 第1章 | 生成AIの基本とAmazon Bedrock入門 | [`chapter1/`](./chapter1) |
-| 第2章 | AIエージェント入門（概念解説のみ） | - |
+| 第2章 | AIエージェント入門 | なし |
 
 ### 第2部 Strands Agents編
 
@@ -50,31 +52,13 @@ https://www.amazon.co.jp/dp/4815641234
 |----|------|----|
 | 第14章 | RAGで社内データをエージェントに活かす | [`chapter14/`](./chapter14) |
 | 第15章 | 【ハンズオン】アンビエントエージェントをCDKで作ろう | [`chapter15/`](./chapter15) |
-| 第16章 | AIエージェントを業務にうまく導入する（概念解説のみ） | - |
+| 第16章 | AIエージェントを業務にうまく導入する | なし |
 
 ### 付録
 
 | 内容 | ディレクトリ |
 |------|----|
 | ハンズオン環境のセットアップ | [`appendix/`](./appendix) |
-
-### 動作環境
-
-- Python 3.14
-- パッケージ管理: [uv](https://github.com/astral-sh/uv)
-- AWSリージョン: バージニア北部（`us-east-1`）
-- 主要モデル: Claude Sonnet 4.6 / Haiku 4.5 / Opus 4.6（USクロスリージョン推論プロファイル）
-
-### 認証と環境変数
-
-- **AWS認証**: 本書のサンプルはすべて **AWS SSO 認証セッション**を前提としています。実行前に `aws sts get-caller-identity` で認証済みセッションがあることを確認してください（アクセスキー・シークレットキーをコードに直接書く構成は使いません）
-- **追加のAPIキー・環境変数が必要な章**:
-  - **第3章**: `06_tools.py` で Tavily 検索ツールをデモします。実行する場合は [Tavily](https://tavily.com/) の API キーを取得し、シェル環境変数 `TAVILY_API_KEY` を設定してください
-  - **第11章**（Langfuse構成）: Langfuse の `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` / `LANGFUSE_HOST` を **AgentCore ランタイムの環境変数**として設定します
-  - **第13章**: `CREDENTIAL_PROVIDER_NAME` / `CALLBACK_URL` / `AWS_DEFAULT_REGION` / `MEMORY_BOOKCHECKERMEMORY_ID` を **AgentCore ランタイムの環境変数**、`NEXT_PUBLIC_AGENT_ARN` を **Amplify Hosting の環境変数**として設定します
-  - **第15章**: ローカルの `.env` に `BEDROCK_MODEL_ID` および Confluence 接続情報（`CONFLUENCE_URL` / `CONFLUENCE_EMAIL` / `CONFLUENCE_API_TOKEN` / `CONFLUENCE_SPACE_KEY`）を設定します。テンプレートは [`chapter15/.env.example`](./chapter15/.env.example) を参照
-
-各章の具体的な手順は、章ディレクトリ配下の `README.md` をご覧ください。
 
 
 ## 🆘 エラー等でハンズオンが進められないときは
