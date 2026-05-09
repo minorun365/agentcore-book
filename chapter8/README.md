@@ -12,7 +12,9 @@
 uv sync
 ```
 
-## 8.4.1 MCPターゲットの呼び出し例
+## 8.4 【サンプルコードのみ】AgentCoreゲートウェイの呼び出し
+
+### 8.4.1 MCPターゲットの呼び出し例
 
 MCP接続の実装例（`01_mcp_client.py`）の実行
 
@@ -20,7 +22,7 @@ MCP接続の実装例（`01_mcp_client.py`）の実行
 uv run 01_mcp_client.py
 ```
 
-## 8.4.2 HTTPターゲットの呼び出し例
+### 8.4.2 HTTPターゲットの呼び出し例
 
 HTTPターゲット経由でAgentCoreランタイムを呼び出す例（`02_http_target.py`）の実行
 

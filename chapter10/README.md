@@ -22,13 +22,17 @@ uv sync
 uv run 01_browser.py
 ```
 
-## 10.2.3 Strands Agentsからの利用例
+## 10.2 【サンプルコードのみ】AgentCoreブラウザ
+
+### 10.2.3 Strands Agentsからの利用例
 
 ```bash
 uv add "strands-agents-tools[agent_core_browser]==0.5.1"
 ```
 
-## 10.3.3 Strands Agentsからの利用
+## 10.3 【サンプルコードのみ】AgentCoreコードインタープリター
+
+### 10.3.3 Strands Agentsからの利用
 
 ```bash
 uv add "strands-agents-tools[agent_core_code_interpreter]==0.5.1"

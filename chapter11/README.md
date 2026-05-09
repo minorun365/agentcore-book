@@ -11,7 +11,9 @@
     - `main.py`：第5章のハンズオンで作成した `handson/app/MyAgent/main.py` をこの内容で置き換えます
     - `pyproject.toml` / `Dockerfile`：上記と同様に差し替え・配置します
 
-## 11.5.2 AgentCoreランタイムからLangfuseへのトレース送信
+## 11.5 【サンプルコードのみ】AgentCoreオブザーバビリティのその他の活用と料金
+
+### 11.5.2 AgentCoreランタイムからLangfuseへのトレース送信
 
 Strands AgentsにOpenTelemetry向けの依存関係を追加
 

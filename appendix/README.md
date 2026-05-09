@@ -4,9 +4,11 @@
 
 付録1（AWSアカウントの準備）と付録3（Bedrockのサービスクォータ）はマネジメントコンソール上の操作のみで、CLIコマンドは含まれません。本READMEには付録2「開発環境の構築」の中で登場するコマンドをまとめています。
 
-## 付録2.3 コードスペースの初期設定
+## 付録2 【ハンズオン】開発環境の構築
 
-### uvのインストール
+### 付録2.3 コードスペースの初期設定
+
+#### uvのインストール
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -16,7 +18,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv --version
 ```
 
-### AWS CLIのインストール
+#### AWS CLIのインストール
 
 ```bash
 # ダウンロード
@@ -36,7 +38,7 @@ aws --version
 rm -rf aws awscliv2.zip
 ```
 
-### AWS認証の設定
+#### AWS認証の設定
 
 ```bash
 aws login --remote
@@ -46,9 +48,9 @@ aws login --remote
 aws sts get-caller-identity
 ```
 
-## 付録2.4 作成済みコードスペースへのアクセス
+### 付録2.4 作成済みコードスペースへのアクセス
 
-### AWS認証の再設定
+#### AWS認証の再設定
 
 ```bash
 aws logout
