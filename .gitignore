@@ -27,6 +27,7 @@ cdk.out/
 .bedrock_agentcore.yaml
 .dockerignore
 Dockerfile
+!chapter15/docker/Dockerfile
 
 # macOS
 .DS_Store
