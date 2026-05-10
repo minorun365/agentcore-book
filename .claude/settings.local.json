@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv CLAUDE.md .claude/CLAUDE.md && ls -la .claude/ && echo \"--- moved ---\")"
+    ],
+    "additionalDirectories": [
+      "/Users/mi-onda/git/minorun365/agentcore-book/.claude"
+    ]
+  }
+}

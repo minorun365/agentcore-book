@@ -1,6 +1,4 @@
-.claude/CLAUDE.md
 .env
-.claude
 
 # Node.js関連
 node_modules/
@@ -22,12 +20,6 @@ cdk.out/
 
 # Streamlit関連
 .streamlit
-
-# Bedrock AgentCore関連
-.bedrock_agentcore.yaml
-.dockerignore
-Dockerfile
-!chapter15/docker/Dockerfile
 
 # macOS
 .DS_Store

@@ -1,0 +1,135 @@
+# CLAUDE.md
+
+このファイルは、本リポジトリで Claude Code（claude.ai/code）が作業するときの指針です。`.gitignore` で除外しているローカル限定ファイルなので、Git 管理されません。
+
+## プロジェクト概要
+
+書籍「Amazon Bedrock AgentCore実践入門」（SBクリエイティブ刊、2026年5月29日発売）の **読者向けサンプルコード公開リポジトリ**。書籍の各章ハンズオン・コードスニペットを、読者がコピペ・写経・答え合わせできる形で配置する。
+
+- **可視性**: 出版前は Private。出版時に Public へ切り替え予定
+- **正本ポリシー**: 本リポジトリのコードが「サンプルコードの正本」。原稿（Markdown）は **別リポジトリ** [`minorun365/agentcore-book-authoring`](https://github.com/minorun365/agentcore-book-authoring) の `authoring/` 配下で管理されている
+- **公開URL**: https://github.com/minorun365/agentcore-book
+
+## 著者構成
+
+| 著者 | GitHub | 担当章 |
+|------|--------|--------|
+| 御田（みのるん） | @minorun365 | 第5〜13章、第16章、付録 |
+| 熊田 | @kumada15 | 第2章、第15章 |
+| 森田 | @moritalous | 第1章、第3章、第4章、第14章 |
+
+## ディレクトリ構成（実態）
+
+```
+appendix/      # 付録（環境構築のコマンド集）
+chapter1/      # 第1章 生成AIの基本とAmazon Bedrock入門
+chapter3/      # 第3章 Strands Agents入門（コードスニペット集）
+chapter4/      # 第4章 Swarm マルチエージェント RAG
+chapter5/      # 第5章 AgentCoreランタイム
+chapter6/      # 第6章 メモリー（スニペット集）
+chapter7/      # 第7章 アイデンティティ（スニペット集）
+chapter8/      # 第8章 ゲートウェイ（スニペット集）
+chapter9/      # 第9章 ポリシー（スニペット集）
+chapter10/     # 第10章 組み込みツール
+chapter11/     # 第11章 オブザーバビリティ
+chapter12/     # 第12章 評価
+chapter13/     # 第13章 Amplify + AgentCore（フルスタックハンズオン）
+chapter14/     # 第14章 Bedrockナレッジベース RAG（Streamlit）
+chapter15/     # 第15章 CDK + AgentCore（アンビエントエージェント）
+```
+
+- `chapter2/` は存在しない（第2章は読み物章）
+- `chapter16/` は存在しない（第16章は読み物章）
+- 付録は `appendix/`（章番号ではなく `appendix` の名前で配置）
+
+## 章タイプ別の役割
+
+| 章タイプ | 対象章 | サンプルの中身 |
+|---------|--------|---------------|
+| ハンズオン章 | 第1, 4, 5, 13, 15章 | 読者が手元で動かしてエージェント／インフラを構築する完成形コード |
+| 解説章のスニペット集 | 第3, 6〜12章 | 本文で言及されるコードスニペットを連番ファイル（`01_xxx.py`形式）で整理 |
+| RAG応用章 | 第14章 | Streamlit ベースの RAG サンプル（第8章のナレッジベースを流用） |
+| 環境構築 | 付録 | コマンドコピペ用 README のみ（コードファイルなし） |
+
+## 技術スタック
+
+- **Python**: 3.14（全章統一）
+- **パッケージ管理**: uv
+- **AIフレームワーク**: Strands Agents（最新版）
+- **インフラ**: AWS CDK（TypeScript）/ AgentCore CLI（`@aws/agentcore@1.0.0-preview.8`）
+- **主要依存**: `strands-agents`, `bedrock-agentcore`, `aws-cdk-lib`, `@aws-cdk/aws-bedrock-agentcore-alpha`
+- **AWSリージョン**: バージニア北部（us-east-1）に統一
+- **使用モデル**: `us.anthropic.claude-sonnet-4-6` / `us.anthropic.claude-haiku-4-5-20251001-v1:0` / `us.anthropic.claude-opus-4-6`（4.5世代モデルは使わない）
+
+## コーディングスタイル
+
+詳細は `.claude/rules/coding-style.md` 参照。ポイントだけ：
+
+- **コード横幅は半角70文字以内**（書籍DTPで折り返しが発生するため）
+- **関数化せずベタ書き**（処理の流れを追いやすく）
+- **1行の日本語コメント**を適度な間隔で配置（複数行コメント不可）
+- 抽象化・共通化より **わかりやすさ優先**
+
+## サンプルコードREADMEの書き方
+
+詳細は `.claude/rules/sample-readme.md` 参照。ポイントだけ：
+
+- 各章 README の役割は **書籍に登場するコマンドを節見出しごとに並べてコピペしやすくする** こと
+- リード文は基本「サンプルコードを実際に動かしてみたい方のために、書籍に掲載されているコマンドをコピペしやすい形で掲載しています。」で始める
+- ハンズオン章は「この章のハンズオンが実施しやすいように、〜」で始めてもよい
+- プレースホルダー置換やAWSリソース事前作成が必要な章は、リード文の直後に1〜2文で動作前提を補足する
+- **節レベル見出しは `## X.Y 【ハンズオン】節タイトル` または `## X.Y 【サンプルコードのみ】節タイトル` の形式で、節単位のタイプを明示する**
+- 項レベル見出しは `### X.Y.Z 項タイトル` を使う（ラベル不要）。`##` を項レベルに使い回さない
+- 節の並び順は書籍本文と同じ順序で並べる（混在章でも書籍順を維持）
+
+## ライブラリバージョン管理
+
+出版後の破壊的変更で動かなくなることを防ぐため、**執筆時点の最新版にバージョンを固定** する。
+
+- Python（`pyproject.toml`）: `==` で固定（例: `"strands-agents-tools == 0.2.21"`）
+- Python（`uv add`）: `==` でバージョン指定（例: `uv add boto3==1.42.96`）
+- Node.js（`npm install`）: `@` でバージョン指定（例: `npm install next@16.2.0`）
+- **例外**: AgentCore CLI（`@aws/agentcore`）は **`v1.0.0-preview.8`** で固定（書籍出版時点で動作確認済みの preview 版）
+
+## 行動ルール
+
+### 原稿との対応関係を維持
+
+サンプルコードを変更する際は、別リポジトリ `agentcore-book-authoring` の `authoring/3_completed/第N章*.md` と対応関係が崩れないか確認する。原稿側で言及されているファイルパス・関数名・コマンドと矛盾する変更は避ける。
+
+### 編集前のファイル読み込み必須
+
+ファイルを編集する前に、必ず Read ツールで現在の内容を読むこと。読まずに Edit を実行すると内容の不一致でエラーになったり、意図しない変更になる。
+
+### Dependabot PR の対応
+
+- 各章ディレクトリ単位で Dependabot PR が発行される
+- 書籍本文中のコマンドにバージョンが直書きされている場合、PR をマージするだけだとREADMEと一致しなくなる。必要なら同時にREADMEとサンプルコードのバージョン記述も更新する
+- 影響範囲が大きいときは authoring 側の `/handle-dependabot` スキル相当のフローに従い、原稿側の影響も確認する
+
+### Public 化を見据えた振る舞い
+
+本リポジトリは出版時に Public へ切り替わる。**読者の目に触れて困る情報をコミットしない**：
+
+- 編集者・著者間のやり取り、内部スケジュール、未公表の機能情報などは含めない
+- README は読者向けに書く（DTP用語・編集ステータス・「ゲラ」「赤字」等の出版工程の語彙は持ち込まない）
+- このCLAUDE.md自体も `.gitignore` で除外済みなので Git 管理されないが、内容を更新する際は念のため公開を前提に書く
+
+### Git 運用
+
+- **main へ直接コミット & push** が直近の運用（Dependabot PR を除く）。`gitlog --oneline` で履歴を確認するとパターンが掴める
+- コミットメッセージは1行の日本語でシンプルに
+- push 前に `git pull --rebase` でリモートの先行コミットを取り込む癖をつける（複数Macで作業しているため）
+
+### コードファイル変更時の同時更新チェック
+
+サンプルコード（`.py` / `.ts` 等）を変更したら、以下の同時更新が必要かを必ず確認する：
+
+- 該当章の `README.md`（コマンドや実行手順が変わったか）
+- `pyproject.toml` / `uv.lock` / `package.json` / `package-lock.json`（依存が変わったか）
+- 別リポジトリ `agentcore-book-authoring` の原稿側（コードの抜粋が原稿に書かれている可能性）
+
+## 関連ドキュメント
+
+- 原稿リポジトリ: [`minorun365/agentcore-book-authoring`](https://github.com/minorun365/agentcore-book-authoring)（Private、著者・編集者のみ）
+- 原稿側 CLAUDE.md: `agentcore-book-authoring/CLAUDE.md`（執筆ワークフロー・ゲラ運用・スキル群を含む詳細版。本ファイルはその抜粋）
