@@ -147,7 +147,7 @@ requires-dist = [
     { name = "bedrock-agentcore", specifier = "==1.6.4" },
     { name = "fastapi" },
     { name = "httpx" },
-    { name = "strands-agents", specifier = "==1.37.0" },
+    { name = "strands-agents", specifier = "==1.38.0" },
     { name = "uvicorn" },
 ]
 
@@ -298,11 +298,11 @@ wheels = [
 
 [[package]]
 name = "idna"
-version = "3.11"
+version = "3.15"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902", size = 194582, upload-time = "2025-10-12T14:55:20.501Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/77/7b3966d0b9d1d31a36ddf1746926a11dface89a83409bf1483f0237aa758/idna-3.15.tar.gz", hash = "sha256:ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc", size = 199245, upload-time = "2026-05-12T22:45:57.011Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea", size = 71008, upload-time = "2025-10-12T14:55:18.883Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/23/408243171aa9aaba178d3e2559159c24c1171a641aa83b67bdd3394ead8e/idna-3.15-py3-none-any.whl", hash = "sha256:048adeaf8c2d788c40fee287673ccaa74c24ffd8dcf09ffa555a2fbb59f10ac8", size = 72340, upload-time = "2026-05-12T22:45:55.733Z" },
 ]
 
 [[package]]
@@ -713,7 +713,7 @@ wheels = [
 
 [[package]]
 name = "strands-agents"
-version = "1.37.0"
+version = "1.38.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
@@ -729,9 +729,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "watchdog" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/03/88/cf23aa713ea68c8a0ad5144341da7ee022e88ce6206512aeafddba257b75/strands_agents-1.37.0.tar.gz", hash = "sha256:3fe6821f730f0468eee91e1ff38eb27a5244046893ffba63e8f5345288096509", size = 824168, upload-time = "2026-04-22T19:18:01.378Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/11/89/3e722f4b5bd913531bc32a23bf88aaa77a434774f294bba5bfa88690ec46/strands_agents-1.38.0.tar.gz", hash = "sha256:02a68ec321ad457f9137dfd6a99cf72cf0e86081fee35de85fbe29b9ac0af2b2", size = 858950, upload-time = "2026-04-30T16:57:43.244Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5f/ff/bede1b8d5fe1c776bd5ed33575505681b3b65ab20889fe6b8344b92fc82d/strands_agents-1.37.0-py3-none-any.whl", hash = "sha256:2fa12e22ed1dac228aa93e91c2ea5381d9b3f08416ed8162222b61b255fee0b1", size = 404526, upload-time = "2026-04-22T19:17:59.634Z" },
+    { url = "https://files.pythonhosted.org/packages/cc/06/de8d8ab14a2e92dcb0fa82db0a4cb102418a1eda139412bbe5b5725e28df/strands_agents-1.38.0-py3-none-any.whl", hash = "sha256:9dc3de17e25d70e367d37f9151f2a4c7b3ac8fc9f6237e9e1f34d00bfbfd001b", size = 422354, upload-time = "2026-04-30T16:57:41.094Z" },
 ]
 
 [[package]]
