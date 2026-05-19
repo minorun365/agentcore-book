@@ -6,7 +6,7 @@ mcp_client = MCPClient(
     lambda: stdio_client(
         StdioServerParameters(
             command="uvx",
-            args=["awslabs.bedrock-kb-retrieval-mcp-server@latest"],
+            args=["--with", "boto3[crt]==1.42.96", "awslabs.bedrock-kb-retrieval-mcp-server@latest"],
             env={
                 "AWS_REGION": "us-east-1",
                 "FASTMCP_LOG_LEVEL": "ERROR",
