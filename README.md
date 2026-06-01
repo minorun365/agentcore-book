@@ -72,3 +72,4 @@ https://www.amazon.co.jp/dp/4815641234
 
 - 神野さん [【書評】 Amazon Bedrock AgentCore 実践入門 ─ AWSでAIエージェントを構築・運用するための一冊 | DevelopersIO](https://dev.classmethod.jp/articles/book-review-amazon-bedrock-agentcore-jissen-nyumon/)
 - ホワイトバード先輩 [【書評】「Amazon Bedrock AgentCore 実践入門」| Nextmode Blog](https://info.nextmode.co.jp/blog/book-review-amazon-bedrock-agentcore-nextmode-blog)
+- 荒木さん [【書評】「Amazon Bedrock AgentCore 実践入門 Strands Agentsで構築するAIエージェント \[AWS深掘りガイド\]」 | Qiita](https://qiita.com/news_it_enj/items/d43d13d84deac05715ac)
