@@ -54,7 +54,7 @@ chapter15/     # 第15章 CDK + AgentCore（アンビエントエージェント
 - **Python**: 3.14（全章統一）
 - **パッケージ管理**: uv
 - **AIフレームワーク**: Strands Agents
-- **インフラ**: AWS CDK（TypeScript）/ AgentCore CLI（`@aws/agentcore@1.0.0-preview.8`）
+- **インフラ**: AWS CDK（TypeScript）/ AgentCore CLI（第5章READMEでは出版後のエラー回避のため `@latest` を案内）
 - **主要依存**: `strands-agents`, `bedrock-agentcore`, `aws-cdk-lib`, `@aws-cdk/aws-bedrock-agentcore-alpha`
 - **AWSリージョン**: バージニア北部（us-east-1）に統一
 - **使用モデル**: `us.anthropic.claude-sonnet-4-6` / `us.anthropic.claude-haiku-4-5-20251001-v1:0` / `us.anthropic.claude-opus-4-6`（4.5世代モデルは使わない）
@@ -87,7 +87,7 @@ chapter15/     # 第15章 CDK + AgentCore（アンビエントエージェント
 - Python（`pyproject.toml`）: `==` で固定（例: `"strands-agents-tools == 0.2.21"`）
 - Python（`uv add`）: `==` でバージョン指定（例: `uv add boto3==1.42.96`）
 - Node.js（`npm install`）: `@` でバージョン指定（例: `npm install next@16.2.0`）
-- **例外**: AgentCore CLI（`@aws/agentcore`）は **`v1.0.0-preview.8`** で固定（書籍出版時点で動作確認済みの preview 版）
+- **例外**: AgentCore CLI（`@aws/agentcore`）は、執筆時点では `v1.0.0-preview.8` で動作確認済み。ただし出版後にCDKのアップデートに伴うエラー回避が必要になった場合は、みのるん承認のうえ、各章READMEのコピペ用コマンドを `@latest` に修正してよい。その場合は、ルートREADMEのお知らせ詳細と該当章READMEの見出し直下の更新行もセットで追加する
 
 ## 行動ルール
 

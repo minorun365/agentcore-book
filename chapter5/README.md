@@ -16,13 +16,15 @@ uv run 00_invoke_harness.py
 
 ### 5.3.2 AgentCore CLIでプロジェクトを作成する
 
+【2026/6/30更新】CDKのアップデートに伴うエラー回避のため、AgentCore CLIのインストールコマンドを修正しました。
+
 ```bash
 # 本章用のディレクトリを作成して移動
 mkdir chapter5
 cd chapter5
 
 # AgentCore CLIをインストール
-npm install -g @aws/agentcore@1.0.0-preview.8
+npm install -g @aws/agentcore@latest
 ```
 
 ```bash
