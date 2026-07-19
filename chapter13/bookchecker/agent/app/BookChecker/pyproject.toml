@@ -12,7 +12,7 @@ dependencies = [
     "aws-opentelemetry-distro",
     "bedrock-agentcore >= 1.0.3",
     "botocore[crt] >= 1.35.0",
-    "mcp >= 1.19.0",
+    "mcp>=1.28.1",
     "nest-asyncio==1.6.0",
     "playwright==1.58.0",
     "requests==2.33.1",
