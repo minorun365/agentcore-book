@@ -6,9 +6,11 @@
 
 ### 15.2.1 ディレクトリ構成
 
+【2026/8/11更新】uv 0.12以降でも書籍と同じディレクトリ構成になるよう、プロジェクト作成コマンドに `--no-package` オプションを追加しました。
+
 ```bash
 # Pythonプロジェクトを作成して移動
-uv init chapter15 --python 3.14
+uv init --no-package chapter15 --python 3.14
 cd chapter15
 
 # データディレクトリを作成

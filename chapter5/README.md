@@ -43,8 +43,10 @@ agentcore deploy
 
 ### 5.3.5 デプロイしたエージェントの呼び出し
 
+【2026/8/11更新】uv 0.12以降でも書籍と同じディレクトリ構成になるよう、プロジェクト作成コマンドに `--no-package` オプションを追加しました。
+
 ```bash
-uv init --python 3.14
+uv init --no-package --python 3.14
 uv add "boto3[crt]==1.42.96"
 ```
 

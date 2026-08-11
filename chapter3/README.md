@@ -55,13 +55,15 @@ uv add "strands-agents-tools[rss]==0.5.1"
 
 ### 3.4.2 Pythonプロジェクトの作成
 
+【2026/8/11更新】uv 0.12以降でも書籍と同じディレクトリ構成になるよう、プロジェクト作成コマンドに `--no-package` オプションを追加しました。
+
 ```bash
 mkdir -p chapter3/handson
 cd chapter3/handson
 ```
 
 ```bash
-uv init --python 3.14
+uv init --no-package --python 3.14
 uv add strands-agents==1.38.0 strands-agents-tools==0.5.1 "boto3[crt]==1.42.96"
 ```
 

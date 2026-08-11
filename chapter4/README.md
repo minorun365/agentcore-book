@@ -6,10 +6,12 @@
 
 ### 4.2.2 Pythonプロジェクトの作成
 
+【2026/8/11更新】uv 0.12以降でも書籍と同じディレクトリ構成になるよう、プロジェクト作成コマンドに `--no-package` オプションを追加しました。
+
 ```bash
 mkdir -p chapter4
 cd chapter4
-uv init --python 3.14
+uv init --no-package --python 3.14
 ```
 
 ```bash

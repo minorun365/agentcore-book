@@ -4,11 +4,7 @@
 
 本章のサンプル（`01_browser.py`、`02_code_interpreter.py`）は単体実行できます。
 
-> **注意**: ブラウザツール（`01_browser.py`）は Python 3.13 で動かしてください。
->
-> ```bash
-> uv init --python 3.13
-> ```
+> **注意**: ブラウザツール（`01_browser.py`）は Python 3.13 で動かしてください。本ディレクトリの `.python-version` で Python 3.13 を指定しています。
 
 ## セットアップ
 
