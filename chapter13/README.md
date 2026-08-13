@@ -6,12 +6,14 @@
 
 ### 13.3.1 プロジェクトの作成
 
+【2026/8/14更新】CDKのアップデートに伴うエラー回避のため、AgentCore CLIのインストールコマンドを修正しました。
+
 ```bash
 # agentディレクトリをGit追跡から除外
 printf '\nagent/\n' >> .gitignore
 
 # AgentCore CLIをインストール
-npm install -g @aws/agentcore@1.0.0-preview.8
+npm install -g @aws/agentcore@latest
 ```
 
 ```bash
