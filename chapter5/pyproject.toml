@@ -9,7 +9,7 @@ dependencies = [
     "strands-agents-tools==0.5.1",
     "bedrock-agentcore==1.6.4",
     "boto3==1.42.96",
-    "mcp==1.27.0",
+    "mcp==1.30.0",
     "mcp-proxy-for-aws",
     "fastapi",
     "uvicorn",
