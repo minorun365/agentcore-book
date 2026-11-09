@@ -23,3 +23,6 @@ cdk.out/
 
 # macOS
 .DS_Store
+
+# Claude Code の手元専用の許可設定（許可したコマンドが引数ごと残り、秘密値を含みうる）
+.claude/settings.local.json
