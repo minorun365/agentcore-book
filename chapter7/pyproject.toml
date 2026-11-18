@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "strands-agents==1.38.0",
-    "bedrock-agentcore==1.6.4",
+    "bedrock-agentcore==1.18.1",
     "httpx",
     "fastapi",
     "uvicorn",
