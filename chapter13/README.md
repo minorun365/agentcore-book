@@ -53,7 +53,7 @@ cd /workspaces/bookchecker
 ```bash
 rm -rf amplify/data
 
-npm install next@16.2.4 react@19.2.5 react-dom@19.2.5 @aws-amplify/ui-react@6.15.3 react-markdown@10.1.0 @aws-sdk/client-bedrock-agentcore@3.1037.0
+npm install next@16.4.6 react@19.2.5 react-dom@19.2.5 @aws-amplify/ui-react@6.15.3 react-markdown@10.1.0 @aws-sdk/client-bedrock-agentcore@3.1037.0
 ```
 
 ### 13.4.3 フロントエンドのコード実装
