@@ -5,7 +5,7 @@ description = "第6章 記憶を管理する「メモリー」"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "strands-agents==1.38.0",
+    "strands-agents==1.43.0",
     "bedrock-agentcore==1.6.4",
     "boto3==1.42.96",
 ]
